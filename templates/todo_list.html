@@ -1,0 +1,19 @@
+<h1> My Daily Todo</h1>
+
+<button>
+    <a href = "/todo-create/"> Add Todo </a>
+</button>
+
+<!-- To show list of todos created in admin panel -->
+{% for todo in todos %}
+    <p>
+        {{ todo.title }}
+        <button>
+            <a href="/todo-update/{{ todo.pk }}/">Update</a>
+        </button>
+
+        <button>
+            <a href="/todo-delete/{{ todo.pk }}/">Delete</a>
+        </button>
+    </p>
+{% endfor %}

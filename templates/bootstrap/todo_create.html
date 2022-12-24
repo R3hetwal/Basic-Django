@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<div class="row m-5">
+  <div class="col">
+    <form action = "" method = "post">
+      {% csrf_token %}
+        <div class="mb-3">
+          <label for="title" class="form-label">Add your Todo</label>
+          <input type="text"
+                class="form-control" 
+                id="title" 
+                placeholder="Add title for your Todo" 
+                name = "title">
+        </div>
+        <button type = "submit" class = "btn btn-success">Save</button>
+    </form>
+ </div>
+</div>
+{% endblock content %}

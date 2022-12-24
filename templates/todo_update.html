@@ -1,0 +1,8 @@
+<h1> Update Daily Todo </h1>
+{{ todo.title }}
+<form action = "" method = "post">
+    {% csrf_token %} <!--To increase security level when error of CSRF verification fails displays
+                      To prevent cross-site attack -->
+    <input type = "text" name = "title" value = "{{ todo.title }}">
+    <button type = "submit"> Update Todos </button>
+</form>

@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+  <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+    {% for todo in todos %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+              <h5 class="card-title">{{ todo.title }}</h5>
+              <a class = "btn btn-success" href = "{% url 'todo-update' todo.pk %}">Update</a>
+              <a class = "btn btn-danger" href = "{% url 'todo-delete' todo.pk %}/">Delete</a>
+          </div>   
+       </div>
+     </div>
+   {% endfor %}
+   <div class="col">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <h5 class = "card-title m-4">
+              <a href = "/todo-create/">
+                <span class = "material-symbols-outlined large-icons">add</span>
+              </a>
+          </h5>
+        </div>   
+     </div>
+</div>
+{% endblock content %}

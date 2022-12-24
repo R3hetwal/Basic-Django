@@ -1,0 +1,10 @@
+# pip install -r requirements.txt
+Django==4.1.4
+
+# superuser
+# rakshyabhetwal10@gmail.com
+# apatul1202112
+
+# user
+# admin
+# apatul10
